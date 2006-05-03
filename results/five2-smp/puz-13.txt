@@ -1,0 +1,9 @@
+IDA* loop iteration #1: using a limit of 36.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 62.
+Thread 0 finished its work.
+
+Number of main IDA* loop iterations: 2
+Mean duration: 8.017 s
+Move number (path length): 62
+Moves: UUULLDDDRDLUURDRDRUULURDLDRULLDDRRULLDRULLDRUUULULDRURRRDLLLLU

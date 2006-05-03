@@ -1,0 +1,154 @@
+Sender: LSF System <lsfadmin@hpc-n08>
+Subject: Job 50292: <mpirun.lsf exe/puz-3 -i matrices/five1.txt> Exited
+
+Job <mpirun.lsf exe/puz-3 -i matrices/five1.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n08>, in queue <courts>, as user <bgaillard>.
+                            <1*hpc-n09>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 15:39:08 2006
+Results reported at Mon May  1 15:39:09 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-3 -i matrices/five1.txt
+------------------------------------------------------------
+
+Exited with exit code 22.
+
+Resource usage summary:
+
+    CPU time   :      0.51 sec.
+    Max Memory :         5 MB
+    Max Swap   :        11 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+TS: execvp(exe/puz-3): No such file or directory
+TS: execvp(exe/puz-3): No such file or directory
+TS: execvp(exe/puz-3): No such file or directory
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n09.u- gmmpirun_wrapper  Exit (22)                05/01/2006 15:39:09
+0002 hpc-n08.u- gmmpirun_wrapper  Exit (22)                05/01/2006 15:39:09
+0003 hpc-n08.u- gmmpirun_wrapper  Exit (22)                05/01/2006 15:39:09
+
+Sender: LSF System <lsfadmin@hpc-n08>
+Subject: Job 50309: <mpirun.lsf exe/puz-3 -i matrices/five1.txt> Exited
+
+Job <mpirun.lsf exe/puz-3 -i matrices/five1.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n08>, in queue <courts>, as user <bgaillard>.
+                            <1*hpc-n23>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 15:43:48 2006
+Results reported at Mon May  1 15:46:52 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-3 -i matrices/five1.txt
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with signal termination: Terminated.
+
+Resource usage summary:
+
+    CPU time   :    534.30 sec.
+    Max Memory :       380 MB
+    Max Swap   :       399 MB
+
+    Max Processes  :         3
+    Max Threads    :         3
+
+The output (if any) follows:
+
+UPCR: UPC thread 1 of 3 on hpc-n08 (process 1 of 3, pid=11347)
+UPCR: UPC thread 2 of 3 on hpc-n08 (process 2 of 3, pid=11346)
+UPCR: UPC thread 0 of 3 on hpc-n23 (process 0 of 3, pid=8646)
+IDA* loop iteration #1: using a limit of 40.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 80.
+Thread 1 acquired work from thread 0.
+Thread 2 acquired work from thread 0.
+Thread 2 finished its work.
+Thread 1 finished its work.
+Thread 0 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 177.910 s
+Move number (path length): 80
+Moves: RDDDDLUUUURDDDDRULUUULDDDRULURRDLLURRRURDLDDDRUULLURULLLDRDRUULDDDRDLLURRUURULLL
+*** Caught a signal: SIGTERM(15) on node 2/3
+*** Caught a signal: SIGTERM(15) on node 1/3
+*** Caught a signal: SIGTERM(15) on node 0/3
+May  1 15:46:50 2006 11238 3 6.1 Rtasks fail:
+Rtask(s) 2 3 1 : exited with signal <9>
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n23.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:46:50
+0002 hpc-n08.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:46:50
+0003 hpc-n08.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:46:50
+
+Complété
+Sender: LSF System <lsfadmin@hpc-n04>
+Subject: Job 50325: <mpirun.lsf exe/puz-3 -i matrices/five1.txt> Exited
+
+Job <mpirun.lsf exe/puz-3 -i matrices/five1.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n04>, in queue <courts>, as user <bgaillard>.
+                            <1*hpc-n09>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 15:50:00 2006
+Results reported at Mon May  1 15:53:01 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-3 -i matrices/five1.txt
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with signal termination: Terminated.
+
+Resource usage summary:
+
+    CPU time   :    531.29 sec.
+    Max Memory :       379 MB
+    Max Swap   :       399 MB
+
+    Max Processes  :         3
+    Max Threads    :         3
+
+The output (if any) follows:
+
+UPCR: UPC thread 1 of 3 on hpc-n04 (process 1 of 3, pid=2809)
+UPCR: UPC thread 2 of 3 on hpc-n04 (process 2 of 3, pid=2808)
+UPCR: UPC thread 0 of 3 on hpc-n09 (process 0 of 3, pid=29907)
+IDA* loop iteration #1: using a limit of 40.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 80.
+Thread 1 acquired work from thread 0.
+Thread 2 acquired work from thread 0.
+*** Caught a signal: SIGTERM(15) on node 1/3
+*** Caught a signal: SIGTERM(15) on node 0/3
+May  1 15:53:01 2006 2700 3 6.1 Rtasks fail:
+Rtask(s) 3 2 1 : exited with signal <9>
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n09.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:53:01
+0002 hpc-n04.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:53:01
+0003 hpc-n04.u- gmmpirun_wrapper  Signaled (SIGKILL)       05/01/2006 15:53:01
+
+Complété

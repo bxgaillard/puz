@@ -1,0 +1,82 @@
+Sender: LSF System <lsfadmin@hpc-n21>
+Subject: Job 50315: <mpirun.lsf exe/puz-9 -i matrices/five1.txt> Done
+
+Job <mpirun.lsf exe/puz-9 -i matrices/five1.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <1*hpc-n21>, in queue <production>, as user <bgaillard>.
+                            <2*hpc-n15>
+                            <1*hpc-n09>
+                            <2*hpc-n02>
+                            <2*hpc-n29>
+                            <1*hpc-n08>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 15:52:38 2006
+Results reported at Mon May  1 15:52:45 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-9 -i matrices/five1.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :     16.20 sec.
+    Max Memory :         5 MB
+    Max Swap   :        11 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+UPCR: UPC thread 8 of 9 on hpc-n21 (process 8 of 9, pid=27695)
+UPCR: UPC thread 1 of 9 on hpc-n29 (process 1 of 9, pid=24880)
+UPCR: UPC thread 0 of 9 on hpc-n08 (process 0 of 9, pid=12457)
+UPCR: UPC thread 5 of 9 on hpc-n09 (process 5 of 9, pid=29965)
+UPCR: UPC thread 6 of 9 on hpc-n15 (process 6 of 9, pid=31892)
+UPCR: UPC thread 4 of 9 on hpc-n02 (process 4 of 9, pid=9359)
+UPCR: UPC thread 2 of 9 on hpc-n29 (process 2 of 9, pid=24879)
+UPCR: UPC thread 3 of 9 on hpc-n02 (process 3 of 9, pid=9360)
+UPCR: UPC thread 7 of 9 on hpc-n15 (process 7 of 9, pid=31893)
+IDA* loop iteration #1: using a limit of 40.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 80.
+Thread 6 acquired work from thread 0.
+Thread 2 acquired work from thread 6.
+Thread 5 acquired work from thread 0.
+Thread 4 acquired work from thread 0.
+Thread 1 acquired work from thread 6.
+Thread 3 acquired work from thread 0.
+Thread 8 acquired work from thread 6.
+Thread 7 acquired work from thread 6.
+Thread 0 finished its work.
+Thread 1 finished its work.
+Thread 2 finished its work.
+Thread 3 finished its work.
+Thread 4 finished its work.
+Thread 5 finished its work.
+Thread 6 finished its work.
+Thread 7 finished its work.
+Thread 8 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 0.660 s
+Move number (path length): 80
+Moves: RDDLUURDDDDLUUUURDDDLURDLUURRDRUULLDDDDLURRULLUURDRURRDLDDDRUULLURDLLLURRURDLULL
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n08.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0002 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0003 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0004 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0005 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0006 hpc-n21.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0007 hpc-n09.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0008 hpc-n02.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+0009 hpc-n02.u- gmmpirun_wrapper  Done                     05/01/2006 15:52:44
+

@@ -1,0 +1,108 @@
+Sender: LSF System <lsfadmin@hpc-n01>
+Subject: Job 50386: <mpirun.lsf exe/puz-15 -i matrices/five2.txt> Done
+
+Job <mpirun.lsf exe/puz-15 -i matrices/five2.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n01>, in queue <production>, as user <bgaillard>.
+                            <2*hpc-n15>
+                            <2*hpc-n04>
+                            <2*hpc-n05>
+                            <2*hpc-n07>
+                            <2*hpc-n30>
+                            <2*hpc-n20>
+                            <1*hpc-n22>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 21:42:06 2006
+Results reported at Mon May  1 21:42:23 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-15 -i matrices/five2.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :    159.42 sec.
+    Max Memory :         5 MB
+    Max Swap   :        11 MB
+
+    Max Processes  :         1
+    Max Threads    :         1
+
+The output (if any) follows:
+
+UPCR: UPC thread 13 of 15 on hpc-n01 (process 13 of 15, pid=31780)
+UPCR: UPC thread  3 of 15 on hpc-n30 (process  3 of 15, pid=2160)
+UPCR: UPC thread 11 of 15 on hpc-n15 (process 11 of 15, pid=11341)
+UPCR: UPC thread 10 of 15 on hpc-n04 (process 10 of 15, pid=14006)
+UPCR: UPC thread  4 of 15 on hpc-n30 (process  4 of 15, pid=2159)
+UPCR: UPC thread 14 of 15 on hpc-n01 (process 14 of 15, pid=31781)
+UPCR: UPC thread  7 of 15 on hpc-n05 (process  7 of 15, pid=18959)
+UPCR: UPC thread  6 of 15 on hpc-n07 (process  6 of 15, pid=2137)
+UPCR: UPC thread  9 of 15 on hpc-n04 (process  9 of 15, pid=14007)
+UPCR: UPC thread  2 of 15 on hpc-n20 (process  2 of 15, pid=11033)
+UPCR: UPC thread  5 of 15 on hpc-n07 (process  5 of 15, pid=2139)
+UPCR: UPC thread  0 of 15 on hpc-n22 (process  0 of 15, pid=30581)
+UPCR: UPC thread  8 of 15 on hpc-n05 (process  8 of 15, pid=18958)
+UPCR: UPC thread 12 of 15 on hpc-n15 (process 12 of 15, pid=11340)
+UPCR: UPC thread  1 of 15 on hpc-n20 (process  1 of 15, pid=11044)
+IDA* loop iteration #1: using a limit of 36.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 62.
+Thread 9 acquired work from thread 0.
+Thread 3 acquired work from thread 9.
+Thread 8 acquired work from thread 0.
+Thread 14 acquired work from thread 9.
+Thread 7 acquired work from thread 0.
+Thread 6 acquired work from thread 0.
+Thread 2 acquired work from thread 9.
+Thread 5 acquired work from thread 0.
+Thread 12 acquired work from thread 8.
+Thread 13 acquired work from thread 9.
+Thread 11 acquired work from thread 7.
+Thread 4 acquired work from thread 0.
+Thread 10 acquired work from thread 7.
+Thread 1 acquired work from thread 9.
+Thread 0 finished its work.
+Thread 2 finished its work.
+Thread 13 finished its work.
+Thread 3 finished its work.
+Thread 1 finished its work.
+Thread 4 finished its work.
+Thread 5 finished its work.
+Thread 6 finished its work.
+Thread 7 finished its work.
+Thread 11 finished its work.
+Thread 8 finished its work.
+Thread 9 finished its work.
+Thread 12 finished its work.
+Thread 10 finished its work.
+Thread 14 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 9.556 s
+Move number (path length): 62
+Moves: RULUULDDDRRULURDDLURDLDLLURUUULLDRDRRDDRUULDDLLURUULURRRDLLLLU
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n22.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0002 hpc-n20.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0003 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0004 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0005 hpc-n05.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0006 hpc-n04.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0007 hpc-n07.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0008 hpc-n30.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0009 hpc-n30.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0010 hpc-n20.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0011 hpc-n04.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0012 hpc-n05.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0013 hpc-n07.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0014 hpc-n01.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+0015 hpc-n01.u- gmmpirun_wrapper  Done                     05/01/2006 21:42:22
+

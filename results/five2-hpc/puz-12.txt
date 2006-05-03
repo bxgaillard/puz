@@ -1,0 +1,94 @@
+Sender: LSF System <lsfadmin@hpc-n30>
+Subject: Job 50383: <mpirun.lsf exe/puz-12 -i matrices/five2.txt> Done
+
+Job <mpirun.lsf exe/puz-12 -i matrices/five2.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n30>, in queue <production>, as user <bgaillard>.
+                            <2*hpc-n29>
+                            <2*hpc-n22>
+                            <2*hpc-n20>
+                            <2*hpc-n07>
+                            <2*hpc-n12>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 21:39:59 2006
+Results reported at Mon May  1 21:40:20 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-12 -i matrices/five2.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :    158.53 sec.
+    Max Memory :      1524 MB
+    Max Swap   :      1607 MB
+
+    Max Processes  :        12
+    Max Threads    :        12
+
+The output (if any) follows:
+
+UPCR: UPC thread 11 of 12 on hpc-n30 (process 11 of 12, pid=1452)
+UPCR: UPC thread  9 of 12 on hpc-n29 (process  9 of 12, pid=3613)
+UPCR: UPC thread  7 of 12 on hpc-n22 (process  7 of 12, pid=30152)
+UPCR: UPC thread 10 of 12 on hpc-n30 (process 10 of 12, pid=1451)
+UPCR: UPC thread  3 of 12 on hpc-n07 (process  3 of 12, pid=1650)
+UPCR: UPC thread  8 of 12 on hpc-n29 (process  8 of 12, pid=3612)
+UPCR: UPC thread  5 of 12 on hpc-n20 (process  5 of 12, pid=10568)
+UPCR: UPC thread  4 of 12 on hpc-n20 (process  4 of 12, pid=10583)
+UPCR: UPC thread  1 of 12 on hpc-n12 (process  1 of 12, pid=4152)
+UPCR: UPC thread  0 of 12 on hpc-n12 (process  0 of 12, pid=4141)
+UPCR: UPC thread  2 of 12 on hpc-n07 (process  2 of 12, pid=1649)
+UPCR: UPC thread  6 of 12 on hpc-n22 (process  6 of 12, pid=30151)
+IDA* loop iteration #1: using a limit of 36.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 62.
+Thread 7 acquired work from thread 0.
+Thread 6 acquired work from thread 0.
+Thread 10 acquired work from thread 7.
+Thread 5 acquired work from thread 0.
+Thread 8 acquired work from thread 6.
+Thread 1 acquired work from thread 7.
+Thread 4 acquired work from thread 0.
+Thread 9 acquired work from thread 7.
+Thread 11 acquired work from thread 0.
+Thread 3 acquired work from thread 0.
+Thread 2 acquired work from thread 0.
+Thread 0 finished its work.
+Thread 2 finished its work.
+Thread 11 finished its work.
+Thread 1 finished its work.
+Thread 3 finished its work.
+Thread 5 finished its work.
+Thread 4 finished its work.
+Thread 6 finished its work.
+Thread 8 finished its work.
+Thread 9 finished its work.
+Thread 7 finished its work.
+Thread 10 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 12.728 s
+Move number (path length): 62
+Moves: DLUUUULLDRURDDRDRUULURDDLULDLDRRULLDRDLURUURDRDLDRUULDDLUUULLU
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n20.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0002 hpc-n12.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0003 hpc-n07.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0004 hpc-n22.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0005 hpc-n22.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0006 hpc-n07.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0007 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0008 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0009 hpc-n30.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0010 hpc-n30.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0011 hpc-n20.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+0012 hpc-n12.u- gmmpirun_wrapper  Done                     05/01/2006 21:40:20
+

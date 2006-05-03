@@ -1,0 +1,207 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bglstyle}
+	[2005/12/12 0.2 Benjamin Gaillard's custom LaTeX documents style]
+
+% UTF-8 is mandatory; you're a looser if you don't use it anyway ;-)
+\RequirePackage[utf8]{inputenc}
+
+% pdfTeX Parameters
+\RequirePackage{ifpdf}
+\ifpdf
+  \pdfcompresslevel=9
+  \pdfdecimaldigits=4
+  \pdfadjustspacing=2
+  \pdfmapline{=ptmr8r Times-Roman 34 <8r.enc}
+  \pdfmapline{=ptmr8y Times-Roman 34 <texnansi.enc}
+  \pdfmapline{=ptmri8r Times-Italic 98 <8r.enc}
+  \pdfmapline{=ptmri8y Times-Italic 98 <texnansi.enc}
+  \pdfmapline{=ptmb8r Times-Bold 34 <8r.enc}
+  \pdfmapline{=ptmb8y Times-Bold 34 <texnansi.enc}
+  \pdfmapline{=ptmbi8r Times-BoldItalic 98 <8r.enc}
+  \pdfmapline{=ptmbi8y Times-BoldItalic 98 <texnansi.enc}
+  \pdfmapline{=phvr8r Helvetica 32 <8r.enc}
+  \pdfmapline{=phvr8y Helvetica 32 <texnansi.enc}
+  \pdfmapline{=phvro8r Helvetica-Oblique 96 <8r.enc}
+  \pdfmapline{=phvro8y Helvetica-Oblique 96 <texnansi.enc}
+  \pdfmapline{=phvb8r Helvetica-Bold 32 <8r.enc}
+  \pdfmapline{=phvb8y Helvetica-Bold 32 <texnansi.enc}
+  \pdfmapline{=phvbo8r Helvetica-BoldOblique 96 <8r.enc}
+  \pdfmapline{=phvbo8y Helvetica-BoldOblique 96 <texnansi.enc}
+  \pdfmapline{=pcrr8r Courier 35 <8r.enc}
+  \pdfmapline{=pcrr8y Courier 35 <texnansi.enc}
+  \pdfmapline{=pcrro8r Courier-Oblique 99 <8r.enc}
+  \pdfmapline{=pcrro8y Courier-Oblique 99 <texnansi.enc}
+  \pdfmapline{=pcrb8r Courier-Bold 35 <8r.enc}
+  \pdfmapline{=pcrb8y Courier-Bold 35 <texnansi.enc}
+  \pdfmapline{=pcrbo8r Courier-BoldOblique 99 <8r.enc}
+  \pdfmapline{=pcrbo8y Courier-BoldOblique 99 <texnansi.enc}
+  \pdfmapline{=psyr Symbol 36}
+  \pdfmapline{=pzdr ZapfDingbats 36}
+  \usepackage{thumbpdf}
+\fi
+
+% Standard Fonts
+\RequirePackage[T1]{fontenc}
+\RequirePackage{textcomp,ae,aecompl,aeguill}
+
+% Custom Fonts
+\IfFileExists{mathpazo.sty}{
+  \renewcommand{\ae@guills}{\ecguills{ppl}}
+  \RequirePackage[sc]{mathpazo}
+}{}
+\IfFileExists{beramono.sty}{\RequirePackage[scaled=.85]{beramono}}{}
+
+% Additional packages
+\RequirePackage{graphicx,fancyhdr}
+
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+	{-3.5ex \@plus -1ex \@minus -.2ex}%
+	{2.3ex \@plus .2ex}%
+	{\normalfont\Large\sffamily\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\large\sffamily\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\normalsize\sffamily\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{3.25ex \@plus1ex \@minus.2ex}%
+	{-1em}%
+	{\normalfont\normalsize\sffamily\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+	{3.25ex \@plus1ex \@minus .2ex}%
+	{-1em}%
+	{\normalfont\normalsize\sffamily\bfseries}}
+
+\@ifclassloaded{article}{}{%
+
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        %\LARGE \@chapapp\space
+        \Huge\scalebox{5}{\thechapter}
+        \par\nobreak
+        \vskip 40\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \sffamily \bfseries #1\par\nobreak
+    \vskip 80\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \sffamily \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\sffamily\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \sffamily \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \sffamily \bfseries #1\par}%
+    \@endpart}
+
+\@ifclassloaded{report}{%
+  \newcommand{\subtitle}[1]{\renewcommand{\@subtitle}{#1}}
+  \newcommand{\@subtitle}{}
+  \newcommand{\group}[1]{\renewcommand{\@group}{#1}}
+  \newcommand{\@group}{}
+  \newcommand{\entity}[1]{\renewcommand{\@entity}{#1}}
+  \newcommand{\@entity}{}
+
+  \renewcommand{\maketitle}{%
+    \begin{titlepage}%
+      {\noindent\small%
+	\begin{tabular}[t t]{@{} p{.5 \textwidth} @{} p{.5 \textwidth} @{}}%
+	  \begin{minipage}[t]{.5 \textwidth}%
+	    \@author%
+	  \end{minipage}%
+	  &%
+	  \begin{minipage}[t]{.5 \textwidth}%
+	    \begin{flushright}%
+	      \@date%
+	    \end{flushright}%
+	  \end{minipage}%
+	\end{tabular}%
+      }%
+
+      \vspace*{\stretch{3}}%
+
+      \begin{center}%
+	\begin{minipage}{0.8\textwidth}%
+	  \sffamily%
+	  \begin{flushright}%
+	    \Huge\@title%
+	  \end{flushright}%
+	  \vspace{0.8cm}%
+	  \rule[5pt]{\textwidth}{2pt}%
+	  \vspace{0.8cm}%
+	  \begin{flushleft}%
+	    \huge\@subtitle%
+	  \end{flushleft}%
+	\end{minipage}%
+      \end{center}%
+
+      \vspace*{\stretch{5}}%
+
+      {\noindent\small%
+	\begin{tabular}[b b]{@{} p{.5 \textwidth} @{} p{.5 \textwidth} @{}}%
+	  \begin{minipage}[b]{.5 \textwidth}%
+	    \@group%
+	  \end{minipage}%
+	  &%
+	  \begin{minipage}[b]{.5 \textwidth}%
+	    \begin{flushright}%
+	      \@entity%
+	    \end{flushright}%
+	  \end{minipage}%
+	\end{tabular}%
+      }%
+    \end{titlepage}%
+
+    \setcounter{footnote}{0}%
+    \global\let\thanks\relax
+    \global\let\maketitle\relax
+    \global\let\@thanks\@empty
+    \global\let\@author\@empty
+    \global\let\@date\@empty
+    \global\let\@title\@empty
+    \global\let\@subtitle\@empty
+    \global\let\title\relax
+    \global\let\subtitle\relax
+    \global\let\author\relax
+    \global\let\date\relax
+    \global\let\and\relax
+  }
+}{\@ifclassloaded{book}{}}}
+
+% Custom margin
+\RequirePackage[margin=3cm]{geometry}
+
+% Custom environments
+\newenvironment{intro}{\begin{quotation}\sffamily}{\end{quotation}\bigskip}
+
+\endinput

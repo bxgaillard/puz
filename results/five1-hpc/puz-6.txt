@@ -1,0 +1,72 @@
+Sender: LSF System <lsfadmin@hpc-n23>
+Subject: Job 50312: <mpirun.lsf exe/puz-6 -i matrices/five1.txt> Exited
+
+Job <mpirun.lsf exe/puz-6 -i matrices/five1.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n23>, in queue <production>, as user <bgaillard>.
+                            <2*hpc-n08>
+                            <1*hpc-n29>
+                            <1*hpc-n02>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 15:48:18 2006
+Results reported at Mon May  1 15:51:21 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-6 -i matrices/five1.txt
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with signal termination: Terminated.
+
+Resource usage summary:
+
+    CPU time   :   1068.17 sec.
+    Max Memory :       759 MB
+    Max Swap   :       798 MB
+
+    Max Processes  :         6
+    Max Threads    :         6
+
+The output (if any) follows:
+
+UPCR: UPC thread 5 of 6 on hpc-n23 (process 5 of 6, pid=9291)
+UPCR: UPC thread 1 of 6 on hpc-n29 (process 1 of 6, pid=24399)
+UPCR: UPC thread 4 of 6 on hpc-n23 (process 4 of 6, pid=9290)
+UPCR: UPC thread 0 of 6 on hpc-n02 (process 0 of 6, pid=8952)
+UPCR: UPC thread 2 of 6 on hpc-n08 (process 2 of 6, pid=12024)
+UPCR: UPC thread 3 of 6 on hpc-n08 (process 3 of 6, pid=12023)
+IDA* loop iteration #1: using a limit of 40.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 80.
+Thread 4 acquired work from thread 0.
+Thread 3 acquired work from thread 0.
+Thread 5 acquired work from thread 4.
+Thread 2 acquired work from thread 0.
+Thread 1 acquired work from thread 0.
+Thread 0 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 178.100 s
+Thread 4 finished its work.
+Thread 1 finished its work.
+Thread 2 finished its work.
+Thread 3 finished its work.
+Thread 5 finished its work.
+Move number (path length): 80
+Moves: RDDDDLUUUURDDDDRULUUULDDDRULURRDLLURRRURDLDDDRUULLURULLLDRDRUULDDDRDLLURRUURULLL
+May  1 15:51:21 2006 9173 3 6.1 Rtasks fail:
+Rtask(s) 2 5 1 6 3 4 : exited with signal <12>
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n02.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+0002 hpc-n29.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+0003 hpc-n23.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+0004 hpc-n23.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+0005 hpc-n08.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+0006 hpc-n08.u- gmmpirun_wrapper  Signaled (SIGUSR2)       05/01/2006 15:51:21
+
+Complété

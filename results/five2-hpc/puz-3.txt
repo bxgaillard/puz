@@ -1,0 +1,54 @@
+Sender: LSF System <lsfadmin@hpc-n08>
+Subject: Job 50374: <mpirun.lsf exe/puz-3 -i matrices/five2.txt> Done
+
+Job <mpirun.lsf exe/puz-3 -i matrices/five2.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n08>, in queue <courts>, as user <bgaillard>.
+                            <1*hpc-n02>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 18:31:59 2006
+Results reported at Mon May  1 18:32:16 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-3 -i matrices/five2.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :     40.09 sec.
+    Max Memory :       379 MB
+    Max Swap   :       399 MB
+
+    Max Processes  :         3
+    Max Threads    :         3
+
+The output (if any) follows:
+
+UPCR: UPC thread 2 of 3 on hpc-n08 (process 2 of 3, pid=19907)
+UPCR: UPC thread 0 of 3 on hpc-n02 (process 0 of 3, pid=15219)
+UPCR: UPC thread 1 of 3 on hpc-n08 (process 1 of 3, pid=19906)
+IDA* loop iteration #1: using a limit of 36.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 62.
+Thread 1 acquired work from thread 0.
+Thread 2 acquired work from thread 0.
+Thread 2 finished its work.
+Thread 1 finished its work.
+Thread 0 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 12.632 s
+Move number (path length): 62
+Moves: DLUUUULLDRURDDRDRUULURDDLULDLDRRULLDRDLURUURDRDLDRUULDDLUUULLU
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n02.u- gmmpirun_wrapper  Done                     05/01/2006 18:32:16
+0002 hpc-n08.u- gmmpirun_wrapper  Done                     05/01/2006 18:32:16
+0003 hpc-n08.u- gmmpirun_wrapper  Done                     05/01/2006 18:32:16
+

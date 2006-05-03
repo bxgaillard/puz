@@ -1,0 +1,67 @@
+Sender: LSF System <lsfadmin@hpc-n15>
+Subject: Job 50377: <mpirun.lsf exe/puz-6 -i matrices/five2.txt> Done
+
+Job <mpirun.lsf exe/puz-6 -i matrices/five2.txt> was submitted from host <hpc-frontal> by user <bgaillard>.
+Job was executed on host(s) <2*hpc-n15>, in queue <production>, as user <bgaillard>.
+                            <2*hpc-n22>
+                            <2*hpc-n29>
+</home/ensinfo/bgaillard> was used as the home directory.
+</home/ensinfo/bgaillard/puz> was used as the working directory.
+Started at Mon May  1 21:06:18 2006
+Results reported at Mon May  1 21:06:35 2006
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun.lsf exe/puz-6 -i matrices/five2.txt
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :     79.58 sec.
+    Max Memory :       762 MB
+    Max Swap   :       804 MB
+
+    Max Processes  :         6
+    Max Threads    :         6
+
+The output (if any) follows:
+
+UPCR: UPC thread 5 of 6 on hpc-n15 (process 5 of 6, pid=9666)
+UPCR: UPC thread 1 of 6 on hpc-n29 (process 1 of 6, pid=2380)
+UPCR: UPC thread 2 of 6 on hpc-n22 (process 2 of 6, pid=28940)
+UPCR: UPC thread 3 of 6 on hpc-n22 (process 3 of 6, pid=28939)
+UPCR: UPC thread 0 of 6 on hpc-n29 (process 0 of 6, pid=2385)
+UPCR: UPC thread 4 of 6 on hpc-n15 (process 4 of 6, pid=9665)
+IDA* loop iteration #1: using a limit of 36.
+Thread 0 finished its work.
+IDA* loop iteration #2: using a limit of 62.
+Thread 3 acquired work from thread 0.
+Thread 2 acquired work from thread 0.
+Thread 5 acquired work from thread 0.
+Thread 4 acquired work from thread 3.
+Thread 1 acquired work from thread 0.
+Thread 5 finished its work.
+Thread 4 finished its work.
+Thread 0 finished its work.
+Thread 1 finished its work.
+Thread 2 finished its work.
+Thread 3 finished its work.
+
+Number of main IDA* loop iterations: 2
+Time taken: 12.694 s
+Move number (path length): 62
+Moves: DLUUUULLDRURDDRDRUULURDDLULDLDRRULLDRDLURUURDRDLDRUULDDLUUULLU
+
+TID  HOST_NAME    COMMAND_LINE            STATUS            TERMINATION_TIME
+==== ========== ================  =======================  ===================
+0001 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+0002 hpc-n22.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+0003 hpc-n22.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+0004 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+0005 hpc-n15.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+0006 hpc-n29.u- gmmpirun_wrapper  Done                     05/01/2006 21:06:35
+
